@@ -18,6 +18,13 @@ public class HomeWork1_2 {
         invertArray(arr);
         System.out.println(Arrays.toString(arr));
 
+        int[] arr1 = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        catchSixByTwo(arr1);
+        System.out.println(Arrays.toString(arr1));
+
+        int[][] arr2 = new int[4][4];
+        fillDiagonal(arr2);
+        printArray(arr2);
     }
     public static void invertArray(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
@@ -26,5 +33,25 @@ public class HomeWork1_2 {
             } else {
                 arr[i] = 0;
             }
+        }
+    }
+    public static void catchSixByTwo(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < 6) {
+                arr[i] *= 2;
+            }
+        }
+    }
+    private static void fillDiagonal(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            arr[i][i] = 1;
+        }
+    }
+    public static void printArray(int[][] array) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println();
         }
     }}
